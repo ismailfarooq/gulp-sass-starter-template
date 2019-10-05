@@ -1,0 +1,61 @@
+//===========================================
+// -Helpers Start
+//===========================================
+
+@import "helpers/variables";
+@import "helpers/mixins";
+
+//===========================================
+// -Helpers End
+//===========================================
+
+//===========================================
+// -Vendors Start
+//===========================================
+
+// Add packages as per your requirement
+// package can be inlude via node_modules or manuallay from vendors folder
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// or
+// @import "vendors/bootstrap";
+
+//===========================================
+// -Vendors End
+//===========================================
+
+//===========================================
+// -Partials Start
+//===========================================
+
+@import "partials/fonts";
+@import "partials/classes";
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/global";
+
+//===========================================
+// -Partials End
+//===========================================
+
+//===========================================
+// -components Start
+//===========================================
+
+@import "components/header";
+@import "components/footer";
+@import "components/navbar";
+
+//===========================================
+// -components End
+//===========================================
+
+//===========================================
+// -Pages Start
+//===========================================
+
+@import "pages/home";
+
+//===========================================
+// -Pages End
+//===========================================

@@ -1,0 +1,35 @@
+{
+  "name": "sass",
+  "version": "2.0.0",
+  "description": "### How do I get set up? ###",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://ismailfarooq@bitbucket.org/ismailfarooq/sass.git"
+  },
+  "author": "Ismail Farooq",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ismailfarooq/sass#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}

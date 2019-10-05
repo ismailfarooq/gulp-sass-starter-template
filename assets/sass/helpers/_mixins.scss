@@ -1,0 +1,87 @@
+//===========================================
+// -Mixins start
+//===========================================
+
+// conver px to rem
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+// Media Query
+@mixin mq($breakpoint, $type: min) {
+  // Checking $breakpoint value in $grid-breakpoints object value
+  @if map_has_key($grid-breakpoints, $breakpoint) {
+    // getting $grid-breakpoints object value and asign width
+    $width: map_get($grid-breakpoints, $breakpoint);
+    // Decrease 1px from $grid-breakpoints value for max-width $type
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    // Print Media query
+    @media (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-only($min-width, $max-width) {
+  @if map_has_key($grid-breakpoints, $min-width) and
+    map_has_key($grid-breakpoints, $max-width)
+  {
+    // define value to relevant$grid-breakpoints
+    $min-width: map_get($grid-breakpoints, $min-width);
+    $max-width: map_get($grid-breakpoints, $max-width) - 1px;
+
+    @media (min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  } @else {
+    @error "Please Define correct media query breakpoint";
+  }
+}
+
+@mixin font-face($family, $path, $name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$family}";
+    src: url("#{$path}/#{$name}.ttf") format("truetype"),
+      url("#{$path}/#{$name}.woff") format("woff"),
+      url("#{$path}/#{$name}.svg##{$name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle($size) {
+  @include square($size);
+  border-radius: 50%;
+}
+
+//===========================================
+// -Mixins end
+//===========================================
