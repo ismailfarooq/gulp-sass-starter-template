@@ -1,18 +1,40 @@
 # README #
 
-## How do I get set up? ##
+# Gulp SASS Starter Boilerplate
 
-#### Install all dependencies ####
-```npm install```
+>Gulp SASS Starter Project with Bootstrap Example
 
-#### compile the code ####
-```npm start```
+### Prerequisites
+* node
+* npm
+* gulp
 
-## Contribution guidelines ##
+## Quick Start:
 
-* PR are always welcome
-* Don't push anything directly into master branch
+```shell
 
-## Who do I talk to? ##
+# Browse to project folder
+cd /path/to/project/this/folder
 
-* ismailfarooq
+# Install all dependencies
+npm install
+
+# and run
+gulp
+
+```
+
+### Additional :shit: commands
+To compile sass files only run:  `gulp sass`
+
+To compile javascript files only run:  `gulp js`
+
+To clean all compiled files run: `gulp clean`
+
+to watch all files run: `gulp watch`
+
+
+### Contribution guidelines ###
+
+* Pull Request are always welcome
+* Please search before creating any issue
