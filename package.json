@@ -23,11 +23,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://ismailfarooq@bitbucket.org/ismailfarooq/sass.git"
+    "url": "git+https://github.com/ismailfarooq/gulp-sass-starter-template.git"
   },
   "author": "Ismail Farooq",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ismailfarooq/sass#readme",
+  "homepage": "https://github.com/ismailfarooq/gulp-sass-starter-template#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1"
