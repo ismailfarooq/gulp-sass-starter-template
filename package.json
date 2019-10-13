@@ -1,7 +1,7 @@
 {
-  "name": "sass",
+  "name": "gulp-sass-starter-template",
   "version": "2.0.0",
-  "description": "### How do I get set up? ###",
+  "description": "Gulp SASS Starter Project with Bootstrap Example",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.1",
