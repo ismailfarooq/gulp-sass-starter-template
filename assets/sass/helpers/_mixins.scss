@@ -82,6 +82,22 @@
   border-radius: 50%;
 }
 
+@mixin is-parent($parent-selector) {
+  $current-sequences: &;
+  $new-sequences: ();
+
+  @each $sequence in $current-sequences {
+    $current-selector: nth($sequence, -1);
+    $prepended-selector: join($parent-selector, $current-selector);
+    $new-sequence: set-nth($sequence, -1, $prepended-selector);
+    $new-sequences: append($new-sequences, $new-sequence, comma);
+  }
+
+  @at-root #{$new-sequences} {
+    @content;
+  }
+}
+
 //===========================================
 // -Mixins end
 //===========================================

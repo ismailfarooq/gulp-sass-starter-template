@@ -3,18 +3,27 @@
 //=======================================================
 
 // Default style start
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html,
 body {
+  box-sizing: border-box;
   font-family: $font-default;
   min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  
   // Media Query max width Usage
   @include mq("md", max) {
     font-size: 14px;
@@ -43,7 +52,7 @@ ol[class] {
 }
 
 %headings {
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
   margin-top: 0;

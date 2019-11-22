@@ -1,6 +1,6 @@
 {
   "name": "gulp-sass-starter-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Gulp SASS Starter Project with Bootstrap Example",
   "main": "gulpfile.js",
   "devDependencies": {
