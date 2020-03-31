@@ -59,6 +59,4 @@ gulp.task("clean", () => {
 });
 
 // Run dev task on "gulp"
-//gulp.task("default", ["sass", "js", "watch"]);
 gulp.task('default', gulp.series('clean', gulp.parallel('sass', 'js', 'watch')));
-//gulp.task('default', gulp.series('clean', 'watch'));
