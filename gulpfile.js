@@ -49,8 +49,8 @@ gulp.task("js", () => {
 
 // Watch all files
 gulp.task("watch", () => {
-  gulp.watch(src.sassPath, ["sass"]);
-  gulp.watch(src.jsPath, ["js"]);
+  gulp.watch(src.sassPath, gulp.series("sass"));
+  gulp.watch(src.jsPath, gulp.series("js"));
 });
 
 // Clean output directory
@@ -59,4 +59,6 @@ gulp.task("clean", () => {
 });
 
 // Run dev task on "gulp"
-gulp.task("default", ["sass", "js", "watch"]);
+//gulp.task("default", ["sass", "js", "watch"]);
+gulp.task('default', gulp.series('clean', gulp.parallel('sass', 'js', 'watch')));
+//gulp.task('default', gulp.series('clean', 'watch'));
