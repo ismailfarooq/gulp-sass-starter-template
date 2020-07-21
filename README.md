@@ -31,10 +31,6 @@ To compile javascript files only run:  `gulp js`
 
 To clean all compiled files run: `gulp clean`
 
-to watch all files run: `gulp watch`
-
-
 ### Contribution guidelines ###
-
 * Pull Request are always welcome
 * Please search before creating any issue
