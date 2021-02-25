@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var clean = require("gulp-clean");
-var sass = require("gulp-sass");
+var sass = require("gulp-dart-sass");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var autoprefixer = require("gulp-autoprefixer");
